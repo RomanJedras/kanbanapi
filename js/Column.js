@@ -23,17 +23,14 @@ function Column(id, name) {
         }
 
         if (event.target.classList.contains('add-card')) {
-            event.stopPropagation();
-            event.preventDefault();
+           //
             let cardName =  prompt("Enter the name of the card");
            // let description = prompt('Enter description card');
-
+            event.stopPropagation();
             const data = new FormData();
             data.append('name', cardName);
           //  data.append('description',description);
             data.append('bootcamp_kanban_column_id', self.id);
-            console.log(data);
-
 
             fetch(prefix+baseUrl + '/card', {
                 method: 'POST',
@@ -48,10 +45,6 @@ function Column(id, name) {
                     const card = new Card(resp.id, cardName);
                     self.addCard(card);
                 });
-
-
-           // self.addCard(new Card(cardName));
-
         }
     });
 }

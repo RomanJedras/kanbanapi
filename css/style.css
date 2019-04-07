@@ -123,33 +123,33 @@
 
 /* line 329, sass/style.css */ .container-fluid { width: 100%; padding-left: 15px; padding-right: 15px; }
 
-/* line 334, sass/style.css */ [class*="col-"] { -ms-flex-preferred-size: 0; flex-basis: 0; -ms-flex-positive: 1; flex-grow: 1; max-width: 100%; }
+/* line 334, sass/style.css */ .column-container { margin: 0; padding: 0; display: flex; flex-direction: row; justify-content: center; list-style: none; flex-wrap: wrap; }
 
-/* line 341, sass/style.css */ .column-container { margin-top: 20px; width: 100%; max-width: 1200px; display: flex; flex-direction: row; justify-content: space-around; }
+/* line 342, sass/style.css */ .column-container li { flex-basis: calc( 100%/3); margin-bottom: 20px; }
 
-/* line 349, sass/style.css */ .board h1 { text-align: center; }
+/* line 346, sass/style.css */ .board h1 { text-align: center; }
 
-/* line 351, sass/style.css */ .board button { margin: 0 auto; display: flex; }
+/* line 348, sass/style.css */ .board button { margin: 0 auto; display: flex; }
 
-/* line 355, sass/style.css */ .column-card-list { list-style: none; position: relative; }
+/* line 352, sass/style.css */ .column-card-list { list-style: none; position: relative; margin-top: 20px; min-height: 230px; }
 
-/* line 358, sass/style.css */ .column-card-list li { padding-bottom: 12px; }
+/* line 357, sass/style.css */ .column-card-list li { padding-bottom: 12px; }
 
-/* line 361, sass/style.css */ .card { width: 80%; display: block; position: relative; padding: 30px 10px; }
+/* line 360, sass/style.css */ .card { width: 80%; display: block; position: relative; padding: 30px 10px; }
 
-/* line 366, sass/style.css */ .card .card-id { top: 0; left: 0; position: absolute; border: 1px solid; width: 100%; padding: 5px; background-color: #74B67A; color: #FFF; }
+/* line 365, sass/style.css */ .card .card-id { top: 0; left: 0; position: absolute; border: 1px solid; width: 100%; padding: 5px; background-color: #74B67A; color: #FFF; }
 
-/* line 375, sass/style.css */ .card .btn-delete { color: #FFF; position: absolute; top: 0; right: 10px; }
+/* line 374, sass/style.css */ .card .btn-delete { color: #FFF; position: absolute; top: 0; right: 10px; }
 
-/* line 380, sass/style.css */ .card p { white-space: nowrap; }
+/* line 379, sass/style.css */ .card p { white-space: nowrap; }
 
-/* line 383, sass/style.css */ .card-title { padding-top: 2px; margin: 5px 0 30px; }
+/* line 382, sass/style.css */ .card-title { padding-top: 2px; margin: 5px 0 30px; }
 
-/* line 386, sass/style.css */ .card-title:after { content: ""; position: absolute; border-bottom: 1px solid; width: 100%; left: 0; top: 65px; }
+/* line 385, sass/style.css */ .card-title:after { content: ""; position: absolute; border-bottom: 1px solid; width: 100%; left: 0; top: 65px; }
 
-/* line 394, sass/style.css */ .has { border: 1px solid; background-color: #FFF; }
+/* line 393, sass/style.css */ .has { border: 1px solid; background-color: #FFF; }
 
-/* line 398, sass/style.css */ .column { position: relative; border: 1px solid; width: 380px; background-color: #FFF; }
+/* line 397, sass/style.css */ .column { position: relative; border: 1px solid; width: 380px; background-color: #FFF; min-height: 250px; }
 
 /* line 403, sass/style.css */ .column a { color: #FFF; text-transform: lowercase; padding-left: 12px; }
 

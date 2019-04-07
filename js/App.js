@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function generateTemplate(name, data, basicElement) {
-    var template = document.getElementById(name).innerHTML;
-    var element = document.createElement(basicElement || 'div');
-
+    const template = document.getElementById(name).innerHTML;
+    let element = document.createElement(basicElement || 'li');
+    element.classList.add('flex-item');
     Mustache.parse(template);
     element.innerHTML = Mustache.render(template, data);
 
