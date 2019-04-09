@@ -33,4 +33,19 @@ Card.prototype = {
             .then(function (resp) {
                 self.element.parentNode.removeChild(self.element);
             })
-    } };
+    },
+    updateCard: function () {
+        const self = this;
+        const data = new FormData();
+        let cardName =  prompt("Enter the name of the card");
+        data.append('name', cardName);
+        data.append('bootcamp_kanban_column_id', self.id);
+        fetch(prefix + baseUrl + '/card/' + self.id, {method: 'PUT', headers: myHeaders, body: data})
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (resp) {
+                self.element.parentNode.appendChild(self.element);
+            })
+    }
+};
