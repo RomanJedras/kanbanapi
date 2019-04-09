@@ -62,5 +62,17 @@ Column.prototype = {
             .then(function(resp) {
                 self.element.parentNode.removeChild(self.element);
             });
+    },
+    updateColumn: function () {
+        const self = this;
+        const data = new FormData();
+        data.append('name', this.name);
+        fetch(prefix+baseUrl + '/column/' + self.id, { method: 'PUT', headers: myHeaders, body: data })
+            .then(function(resp) {
+                return resp.json();
+            })
+            .then(function(resp) {
+                self.element.parentNode.appendChild(self.element);
+            });
     }
 };
